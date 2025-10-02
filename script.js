@@ -79,11 +79,11 @@ function atualizarFisicaAlvo() {
     if (alvo.pulando) {
         alvo. velocidadeY += jogador.gravidade;
         alvo.x += alvo.velocidadeX;
-        alvo.y += alvo. velocidadeY;
+        alvo.y += alvo.velocidadeY;
 
         if (alvo.y + alvo.altura >= canvas.height) {
             alvo.y = canvas.height - alvo.altura;
-            alvo. pulando = false;
+            alvo.pulando = false;
             alvo.velocidadeX = 0;
             alvo.velocidadeY = 0;
         } else {
@@ -100,8 +100,8 @@ function chutar () {
 
     if (distancia < 150) {
         alvo.velocidadeX = distX > 0 ? 20 : -20;
-        alvo. velocidadeY = -20;
-        alvo. pulando = true;
+        alvo.velocidadeY = -20;
+        alvo.pulando = true;
     }
 }
 
@@ -165,3 +165,4 @@ function verificarImagensCarregadas () {
 imagemJogador.onload = verificarImagensCarregadas;
 imagemAlvo.onload = verificarImagensCarregadas;
 imagemFundo.onload = verificarImagensCarregadas;
+
